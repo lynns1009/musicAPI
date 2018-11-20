@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for song in songs %}
+    <div class="song">
+        <a href="{% url 'song_detail' song.id %}">
+            <p>{{ song.title | capfirst }}</p>
+        </a>
+    </div>
+{% endfor %}
+</body>
+</html>

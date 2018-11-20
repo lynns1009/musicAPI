@@ -16,6 +16,7 @@ class Album(models.Model):
 class Music(models.Model):
     title = models.CharField(max_length=100,blank=True,default='')
     lyrics = models.TextField()
+    album = models.CharField(max_length=100,blank=True,default='')
     alb_re=models.ForeignKey(Album, on_delete=models.CASCADE)
 
     def __str__(self):
