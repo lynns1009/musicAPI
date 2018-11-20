@@ -7,7 +7,11 @@
 <body>
 <p>Home</p>
 {% for album in albums %}
-    <li>{{ album.name}}</li>
+    <div class="album">
+        <a href="{% url 'album_detail' album.id %}">
+            <p>{{ album.name | capfirst }}</p>
+        </a>
+    </div>
 {% endfor %}
 </body>
 </html>

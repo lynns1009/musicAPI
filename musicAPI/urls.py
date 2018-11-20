@@ -22,8 +22,8 @@ from music import views
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^$',views.home,name='home'),
-    url(r'^songs/',views.songs_list,name='songs_list'),
-    url(r'^songs/(\d+)/', views.song_detail,name='song_detail'),
-    url(r'albums/<int:pk>',views.album_detail,name='album_detail'),
+    url(r'songs/',views.songs_list,name='songs_list'),
+    url(r'songs/(\d+)/', views.song_detail,name='song_detail'),
+    url(r'albums/(\d+)/',views.album_detail,name='album_detail'),
 
 ]
